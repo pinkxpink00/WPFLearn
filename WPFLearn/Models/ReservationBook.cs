@@ -8,11 +8,29 @@ namespace WPFLearn.Models
 {
     public class ReservationBook
     {
-        private readonly Dictionary<RoomID, List<Reservation>> _roomReservations;
-        //Init Dictionary RoomID and Reservation List
+        private readonly List<Reservation> _reservations;
+        //Init Reservations
         public ReservationBook()
         {
-            _roomReservations = new Dictionary<RoomID, List<Reservation>>();
+            _reservations = new List<Reservation>();
         }
+        //Init View for User
+        public IEnumerable<Reservation> GetReservationForUser(string username)
+        {
+            return _reservations.Where(r => r.UserName == username);
+        }
+        //Init for making reservation for user
+        public void AddReservation(Reservation reservation)
+        {
+            foreach (Reservation existingReservation in _reservations)
+            {
+                if (existingReservation.Conflicts(reservation))
+                {
+                    throw new ReservationConflictException();
+                }
+            }
+            _reservations.Add(reservation);
+        }
+
     }
 }
