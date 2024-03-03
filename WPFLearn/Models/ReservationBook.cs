@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace WPFLearn.Models
 {
-    internal class ReservationBook
+    public class ReservationBook
     {
+        private readonly Dictionary<RoomID, List<Reservation>> _roomReservations;
+        //Init Dictionary RoomID and Reservation List
+        public ReservationBook()
+        {
+            _roomReservations = new Dictionary<RoomID, List<Reservation>>();
+        }
     }
 }
