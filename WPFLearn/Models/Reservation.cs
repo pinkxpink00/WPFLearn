@@ -21,5 +21,10 @@ namespace WPFLearn.Models
             StartTime = startTime;
             EndTime = endTime;
         }
+
+        public bool Conflicts(Reservation reservation)
+        {
+            
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPFLearn.Exceptions;
 
 namespace WPFLearn.Models
 {
@@ -26,7 +27,7 @@ namespace WPFLearn.Models
             {
                 if (existingReservation.Conflicts(reservation))
                 {
-                    throw new ReservationConflictException();
+                    throw new ReservationConflictException(existingReservation, reservation);
                 }
             }
             _reservations.Add(reservation);
