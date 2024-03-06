@@ -24,7 +24,12 @@ namespace WPFLearn.Models
 
         public bool Conflicts(Reservation reservation)
         {
-            
+            if (reservation.RoomID != RoomID)
+            {
+                return false;
+            }
+
+            return reservation.StartTime< EndTime || reservation.EndTime > StartTime;
         }
     }
 }
