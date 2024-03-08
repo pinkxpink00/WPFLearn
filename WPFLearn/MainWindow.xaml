@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:WPFLearn.Views"
         mc:Ignorable="d"
-        Title="ReserRoom" Height="450" Width="800">
-    <Grid>
+        Title="ReserRoom" Height="450" Width="800" FontSize="17">
+    <Grid Margin="30 20" MaxWidth="700">
         <views:MakeReservationView/>
     </Grid>
 </Window>
