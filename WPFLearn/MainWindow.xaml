@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="ReserRoom" Height="450" Width="800" FontSize="17">
     <Grid Margin="30 20" MaxWidth="700">
-        <views:MakeReservationView/>
+        <views:ReservationListingView/>
     </Grid>
 </Window>

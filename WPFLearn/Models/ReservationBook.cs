@@ -16,9 +16,9 @@ namespace WPFLearn.Models
             _reservations = new List<Reservation>();
         }
         //Init View for User
-        public IEnumerable<Reservation> GetReservationForUser(string username)
+        public IEnumerable<Reservation> GetAllReservations(string username)
         {
-            return _reservations.Where(r => r.UserName == username);
+            return _reservations;
         }
         //Init for making reservation for user
         public void AddReservation(Reservation reservation)
