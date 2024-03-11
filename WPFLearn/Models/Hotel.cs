@@ -19,9 +19,9 @@ namespace WPFLearn.Models
             Name = name;    
         }
 
-        public IEnumerable<Reservation> GetReservationsForUser(string username)
+        public IEnumerable<Reservation> GetAllReservations()
         {
-            return _reservationBook.GetAllReservations(username);
+            return _reservationBook.GetAllReservations();
         }
 
         public void MakeReservation(Reservation reservation)

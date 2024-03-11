@@ -18,7 +18,7 @@
         
         <TextBlock 
             Text="MakeReservation"
-            FontSize="24" 
+            Style="{StaticResource Header}" 
             Grid.Row="0"/>
         
         <Grid Grid.Row="1" Margin="0 25 0 0">

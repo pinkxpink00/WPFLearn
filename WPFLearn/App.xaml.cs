@@ -20,7 +20,7 @@ namespace WPFLearn
                 new DateTime(2000, 1, 2),
                 new DateTime(2000, 1, 6)));
 
-            IEnumerable<Reservation> reservations = hotel.GetReservationsForUser("Signleton");
+            IEnumerable<Reservation> reservations = hotel.GetAllReservations();
 
             base.OnStartup(e);
         }

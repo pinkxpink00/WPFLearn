@@ -16,7 +16,7 @@ namespace WPFLearn.Models
             _reservations = new List<Reservation>();
         }
         //Init View for User
-        public IEnumerable<Reservation> GetAllReservations(string username)
+        public IEnumerable<Reservation> GetAllReservations()
         {
             return _reservations;
         }
