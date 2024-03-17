@@ -21,6 +21,43 @@
                        Style="{StaticResource Header}"
                        Text="View Reservation"
                        Margin="30 0 0 0"/>
+            <Button Content="Make Reservation"
+                    Grid.Column="1"
+                    Margin="10 0 0 0"/>
         </Grid>
+
+        <ListView Grid.Row="1" Margin=" 0 25 0 0">
+            <ListViewItem/>
+            <ListViewItem/>
+            <ListViewItem/>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Username">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="Josh"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Start Date">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="30/12/12"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="End Date">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="1/1/13"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
     </Grid>
 </UserControl>
